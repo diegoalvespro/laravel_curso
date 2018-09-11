@@ -26,3 +26,7 @@ Route::get('/', function () {
 Route::get('/hello/world', function() {
     return 'Hello World';
 });
+
+Route::get('blog', function() {
+    return 'Nosso novo blog';
+});
