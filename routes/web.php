@@ -31,6 +31,8 @@ Route::get('blog', function() {
     return 'Nosso novo blog';
 });
 
-Route::get('/hello/{name}', function($name) {
+// atributo name sera apresentado com a variavel $name, passado pela url
+// ao adicionar um ponto de interrogacao no atributo, é possível atribuir um valor default para variavel name. no caso 'world'
+Route::get('/hello/{name?}', function($name='world') {
     return 'Hello ' . $name;
 });
