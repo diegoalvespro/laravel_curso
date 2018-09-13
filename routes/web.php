@@ -33,6 +33,13 @@ Route::get('blog', function() {
 
 // atributo name sera apresentado com a variavel $name, passado pela url
 // ao adicionar um ponto de interrogacao no atributo, é possível atribuir um valor default para variavel name. no caso 'world'
-Route::get('/hello/{name?}', function($name='world') {
+/*Route::get('/hello/{name?}', function($name='world') {
     return 'Hello ' . $name;
-});
+});*/
+
+// criando rota utilizando controller
+// para criar o controller, é preciso inserir no terminal o seguinte:
+// $ php artisan make;controller HelloController
+// fazendo isso o controller sera criado na pasta 'app/Http/Controllers/HelloController.php
+// agora é possivel separar os controllers fazendo uma melhor organizacao
+Route::get('/hello/{name?}', 'HelloController@index');
