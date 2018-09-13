@@ -30,3 +30,7 @@ Route::get('/hello/world', function() {
 Route::get('blog', function() {
     return 'Nosso novo blog';
 });
+
+Route::get('/hello/{name}', function($name) {
+    return 'Hello ' . $name;
+});
